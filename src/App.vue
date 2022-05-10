@@ -3,10 +3,10 @@
     <v-app-bar app color="gray" dark>
       <v-row justify="space-around" class="mr-2">
         <span class="group d-inline-flex pa-2">
-          <v-icon>mdi-twitter</v-icon>
-          <v-icon>mdi-instagram</v-icon>
-          <v-icon>mdi-facebook</v-icon>
-          <v-icon>mdi-github-circle</v-icon>
+          <v-icon class="pa-2">mdi-twitter</v-icon>
+          <v-icon class="pa-2">mdi-instagram</v-icon>
+          <v-icon class="pa-2">mdi-facebook</v-icon>
+          <v-icon class="pa-2">mdi-github</v-icon>
         </span>
       </v-row>
       <v-item> </v-item>
@@ -23,19 +23,19 @@
     </v-app-bar>
 
     <v-main>
-      <HelloWorld />
+      <MainBody />
     </v-main>
   </v-app>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld";
+import MainBody from "./components/MainBody.vue";
 
 export default {
   name: "App",
 
   components: {
-    HelloWorld,
+    MainBody
   },
 
   data: () => ({
