@@ -1,25 +1,27 @@
 <template>
   <v-app>
-    <v-app-bar app color="gray" dark>
+    <v-app-bar app color="grey lighten-4" dark>
+      <div align="center">
+        <p color="grey darken-1">Tommy's Blog</p>
+      </div>
       <v-row justify="space-around" class="mr-2">
         <span class="group d-inline-flex pa-2">
-          <v-icon class="pa-2">mdi-twitter</v-icon>
-          <v-icon class="pa-2">mdi-instagram</v-icon>
-          <v-icon class="pa-2">mdi-facebook</v-icon>
-          <v-icon class="pa-2">mdi-github</v-icon>
+          <v-btn icon href="https://twitter.com/liutommy880108">
+            <v-icon color="grey darken-1" class="pa-2">mdi-twitter</v-icon>
+          </v-btn>
+          <v-btn icon href="https://www.instagram.com/tom__liu/">
+            <v-icon color="grey darken-1" class="pa-2">mdi-instagram</v-icon>
+          </v-btn>
+          <v-btn icon href="https://www.facebook.com/tommy.liu.3192">
+            <v-icon color="grey darken-1" class="pa-2">mdi-facebook</v-icon>
+          </v-btn>
+          <v-btn icon href="https://github.com/kuanchengLiu">
+            <v-icon color="grey darken-1" class="pa-2">mdi-github</v-icon>
+          </v-btn>
         </span>
       </v-row>
       <v-item> </v-item>
       <v-spacer></v-spacer>
-
-      <v-btn
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-        text
-      >
-        <span class="mr-2">Latest Release</span>
-        <v-icon>mdi-open-in-new</v-icon>
-      </v-btn>
     </v-app-bar>
 
     <v-main>
@@ -35,7 +37,7 @@ export default {
   name: "App",
 
   components: {
-    MainBody
+    MainBody,
   },
 
   data: () => ({
@@ -43,3 +45,7 @@ export default {
   }),
 };
 </script>
+
+<style lang="scss" scoped>
+@import "./assets/scss/main.scss";
+</style>
