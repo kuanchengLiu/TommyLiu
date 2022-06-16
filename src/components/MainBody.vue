@@ -2,9 +2,9 @@
   <div>
     <v-carousel>
       <v-carousel-item
-        v-for="(item, i) in items"
-        :key="i"
-        :src="logo.src"
+        v-for="n in image"
+        :key="n"
+        :src="n"
         reverse-transition="fade-transition"
         transition="fade-transition"
       ></v-carousel-item>
@@ -14,9 +14,11 @@
 
 <script>
 export default {
-    data() {
-        
-    }
+  data() {
+    return {
+      image: [require("@/assets/736461.png"), require("@/assets/67855.jpg")],
+    };
+  },
 };
 </script>
 
