@@ -1,8 +1,8 @@
 <template>
   <v-app>
     <v-app-bar app color="grey lighten-4" dark>
-      <div align="center">
-        <p color="grey darken-1">Tommy's Blog</p>
+      <div class="fill-width" align="center">
+        <p class="blog-name">Tommy's Blog</p>
       </div>
       <v-row justify="space-around" class="mr-2">
         <span class="group d-inline-flex pa-2">
@@ -20,6 +20,7 @@
           </v-btn>
         </span>
       </v-row>
+      <v-row justify="space-around"> </v-row>
       <v-item> </v-item>
       <v-spacer></v-spacer>
     </v-app-bar>
@@ -47,5 +48,6 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+@import "./assets/scss/color.scss";
 @import "./assets/scss/main.scss";
 </style>
