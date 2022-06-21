@@ -1,5 +1,5 @@
 .title{
-    color: white;
+    color: #37474F;
 }
 .blog-name{
     padding-top: 1rem;
@@ -7,4 +7,16 @@
     height: 100%;
     font-weight: bold;
     text-align: center;
+}
+.blog-appbar-col {
+    color: #616161;
+    height: 100%;
+    font-weight: bold;
+    text-align: center;
+    padding-right: 2rem !important;
+}
+.introduction-title {
+    color: #616161;
+    font-weight: bold;
+    font-size: large;
 }
