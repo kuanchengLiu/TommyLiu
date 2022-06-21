@@ -29,23 +29,23 @@
       </v-alert>
     </div>
     <div class="px-15">
-      <v-row>
-        <v-col v-for="n in 3" :key="n" class="d-flex child-flex" cols="4">
-          <v-img :src="`https://picsum.photos/500/300?image=${n * 5 + 10}`"
-            :lazy-src="`https://picsum.photos/10/6?image=${n * 5 + 10}`" aspect-ratio="1" class="grey lighten-2">
-            <template v-slot:placeholder>
-              <v-row class="fill-height ma-0" align="center" justify="center">
-                <v-progress-circular indeterminate color="grey lighten-5"></v-progress-circular>
-              </v-row>
-            </template>
-            <v-fade-transition>
-              <v-overlay absolute color="#036358">
-                <v-btn>See more info</v-btn>
-              </v-overlay>
-            </v-fade-transition>
-          </v-img>
-        </v-col>
-      </v-row>
+      <v-timeline>
+        <v-timeline-item v-for="(year, i) in years" :key="i" :color="year.color" small>
+          <template v-slot:opposite>
+            <span :class="`headline font-weight-bold ${year.color}--text`" v-text="year.year"></span>
+          </template>
+          <div class="py-4">
+            <h2 :class="`headline font-weight-light mb-4 ${year.color}--text`">
+              Lorem ipsum
+            </h2>
+            <div>
+              Lorem ipsum dolor sit amet, no nam oblique veritus. Commune scaevola imperdiet nec ut, sed euismod
+              convenire principes at. Est et nobis iisque percipit, an vim zril disputando voluptatibus, vix an
+              salutandi sententiae.
+            </div>
+          </div>
+        </v-timeline-item>
+      </v-timeline>
     </div>
   </v-container>
 </template>
@@ -65,6 +65,38 @@ export default {
       color: {
         white: colors.white,
       },
+      years: [
+        {
+          color: 'cyan',
+          year: 'now',
+          title: '',
+          detail: ''
+        },
+        {
+          color: 'green',
+          year: '2021-12-01 ~ 2022-02-18',
+          title: '',
+          detail: '完成兵役'
+        },
+        {
+          color: 'pink',
+          year: '2021-06-01 ~ 2021-11-23',
+          title: '',
+          detail: '前往當兵'
+        },
+        {
+          color: 'amber',
+          year: '2021',
+          title: '',
+          detail: ''
+        },
+        {
+          color: 'orange',
+          year: '2018',
+          title: '',
+          detail: ''
+        },
+      ],
     };
   },
 };

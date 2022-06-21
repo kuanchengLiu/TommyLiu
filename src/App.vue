@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar app color="grey lighten-4" dark>
       <div class="fill-width" align="center">
-        <p class="blog-name">Tommy's Blog</p>
+        <p class="blog-name">Tommy Liu</p>
       </div>
       <v-row justify="space-around" class="mr-2">
         <span class="group d-inline-flex pa-2">

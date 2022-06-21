@@ -32,7 +32,7 @@
                     <v-row>
                         <v-col class="fill-width" justify="space-around">
                             <div class="introduction-title">Hobby</div>
-                            <div class="body-1">Taiwan Taipei City</div>
+                            <div class="body-1">Travel(specially Japan), reading light novels and watch NBA games</div>
                         </v-col>
                     </v-row>
                 </div>
