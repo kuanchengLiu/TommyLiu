@@ -13,6 +13,9 @@
                 The mundane everyday we have experienced may be a series of
                 miracles
               </div>
+              <div class="title">
+                我們所經歷的每個平凡的日常，也許就是連續發生的奇蹟。
+              </div>
             </v-col>
           </v-row>
         </v-carousel-item>
