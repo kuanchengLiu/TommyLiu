@@ -9,7 +9,7 @@
               <div class="h5 title pt-14">
                 私たちが経験した平凡な日常は、連続して起こる奇跡かもしれません
               </div>
-              <div class="h5 title">
+              <div class="title">
                 The mundane everyday we have experienced may be a series of
                 miracles
               </div>
@@ -21,12 +21,70 @@
     <div style="position:relative;margin-top:-150px;">
       <card />
     </div>
+
     <div class="pa-10">
       <v-alert class="font-italic" border="left" colored-border color="white" elevation="2" style="text-align: center">
         I'am a Back end Development and I like travel! <br />
         The origin of this blog is also limited to my desire to test my
         abilities and record my own life.
       </v-alert>
+    </div>
+    <div class="pb-10 pt-5 subTitle">
+      SKILLS
+    </div>
+    <div>
+      <v-row class="pl-15 pr-15">
+        <v-col>
+          <div class="skill-title"> Front end</div>
+          <div class="text-center">
+            <v-chip class="ma-2" color="green darken-1">
+              <v-icon left>
+                mdi-vuejs
+              </v-icon>
+              Vue js
+            </v-chip>
+            <v-chip class="ma-2" color="primary">
+              <v-icon left>
+                mdi-vuetify
+              </v-icon>
+              Vuetify
+            </v-chip>
+            <v-chip class="ma-2" color="red">
+              <v-icon left>
+                mdi-angular
+              </v-icon>
+              Angular
+            </v-chip>
+            <v-chip class="ma-2" color="#bf4080">
+              <v-icon left>
+                mdi-sass
+              </v-icon>
+              Sass
+            </v-chip>
+            <v-chip class="ma-2" color="yellow">
+              <v-icon left>
+                mdi-language-javascript
+              </v-icon>
+              Javascript
+            </v-chip>
+          </div>
+        </v-col>
+        <v-col>
+          <div class="skill-title"> Back end</div>
+          <v-chip class="ma-2" color="blue lighten-1">
+            <v-icon left>
+              mdi-language-csharp
+            </v-icon>
+            ASP.NET
+          </v-chip>
+        </v-col>
+        <v-col>
+          <div class="skill-title"> Android </div>
+        </v-col>
+      </v-row>
+    </div>
+    <div class="pb-10 pt-10 subTitle">
+      EXPERIENCE & EDUCATION
     </div>
     <div class="px-15">
       <v-timeline>
@@ -44,6 +102,48 @@
           </div>
         </v-timeline-item>
       </v-timeline>
+    </div>
+
+    <div class="pb-10 pt-10 subTitle">
+      PORTFOLIO
+    </div>
+    <div>
+      <v-card class="mx-auto" max-width="344">
+        <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="200px"></v-img>
+
+        <v-card-title>
+          Top western road trips
+        </v-card-title>
+
+        <v-card-subtitle>
+          1,000 miles of wonder
+        </v-card-subtitle>
+
+        <v-card-actions>
+          <v-btn color="orange lighten-2" text>
+            Explore
+          </v-btn>
+
+          <v-spacer></v-spacer>
+
+          <v-btn icon @click="show = !show">
+            <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+          </v-btn>
+        </v-card-actions>
+
+        <v-expand-transition>
+          <div v-show="show">
+            <v-divider></v-divider>
+
+            <v-card-text>
+              I'm a thing. But, like most politicians, he promised more than he could deliver. You won't have time for
+              sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data file! Hey,
+              you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to find a way to
+              escape.
+            </v-card-text>
+          </div>
+        </v-expand-transition>
+      </v-card>
     </div>
   </v-container>
 </template>

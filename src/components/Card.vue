@@ -3,7 +3,7 @@
         <v-list-item two-line>
             <v-list-item-content>
                 <v-list-item-title class="text-h5 mb-1"> 劉冠呈 Tommy</v-list-item-title>
-                <v-list-item-subtitle>Back end Developer/Android Developer</v-list-item-subtitle>
+                <v-list-item-subtitle>Back end Developer | Android Developer</v-list-item-subtitle>
                 <div class="pt-5">
                     <v-row>
                         <v-col class="fill-width" justify="space-around">
