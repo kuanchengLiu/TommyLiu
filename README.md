@@ -1,4 +1,5 @@
-# person-blog
+# my-cv
+![](https://i.imgur.com/Z9d5F3d.png)
 
 ## Project setup
 ```
