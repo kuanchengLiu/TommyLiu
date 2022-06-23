@@ -80,6 +80,12 @@
             </v-icon>
             ASP.NET
           </v-chip>
+          <v-chip class="ma-2" color="blue lighten-1">
+            <v-icon left src="https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg">
+              https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg
+            </v-icon>
+            RabbitMQ
+          </v-chip>
         </v-col>
         <v-col>
           <div class="skill-title"> Android </div>
@@ -95,29 +101,26 @@
           <template v-slot:opposite>
             <span :class="`headline font-weight-bold ${year.color}--text`" v-text="year.year"></span>
           </template>
-          <div class="py-4">
-            <h2 :class="`headline font-weight-light mb-4 ${year.color}--text`">
-              {{year.title}}
-            </h2>
-            <div>
-              {{year.detail}}
-            </div>
-          </div>
+          <v-card class="elevation-2">
+            <v-card-title :class="`headline font-weight-light mb-4 ${year.color}--text`">
+              {{ year.title }}
+            </v-card-title>
+            <v-card-text class="text-h6">
+              {{ year.detail }}
+            </v-card-text>
+          </v-card>
         </v-timeline-item>
       </v-timeline>
     </div>
-
     <div class="pb-10 pt-10 subTitle">
       PORTFOLIO
     </div>
     <div>
       <v-card class="mx-auto" max-width="344">
         <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="200px"></v-img>
-
         <v-card-title>
           Top western road trips
         </v-card-title>
-
         <v-card-subtitle>
           1,000 miles of wonder
         </v-card-subtitle>
@@ -166,12 +169,13 @@ export default {
       color: {
         white: colors.white,
       },
+      show: false,
       years: [
         {
           color: 'cyan',
           year: 'now',
           title: '析數智匯股份有限公司 (Advant Analytics Tactics)',
-          detail: '去考證照及後端工作內容'
+          detail: '- 去考證照及後端工作內容'
         },
         {
           color: 'green',

@@ -12,7 +12,7 @@
                         </v-col>
                         <v-col class="fill-width" justify="space-around">
                             <div class="introduction-title">Email</div>
-                            <div class="body-1">tommyliu0108@gmailcom</div>
+                            <div class="body-1">tommyliu0108@gmail.com</div>
                         </v-col>
                     </v-row>
                 </div>
@@ -42,10 +42,6 @@
                 <v-img :src="slideImage[0]"></v-img>
             </v-list-item-avatar>
         </v-list-item>
-
-        <!-- <v-card-actions>
-            <v-btn outlined rounded text> Button </v-btn>
-        </v-card-actions> -->
     </v-card>
 </template>
 <script>
