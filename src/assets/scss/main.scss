@@ -13,10 +13,10 @@ $grey-lighten-4: #616161;
 }
 .blog-appbar-col {
     color: $grey-lighten-4;
-    height: 100%;
+
     font-weight: bold;
     text-align: center;
-    padding-right: 2rem !important;
+    font-size: larger;
 }
 .introduction-title {
     color: $grey-lighten-4;
@@ -36,4 +36,5 @@ $grey-lighten-4: #616161;
     color: $grey-lighten-4;
     font-weight: bold;
     text-align: center;
+    font-size: 25px;
 }

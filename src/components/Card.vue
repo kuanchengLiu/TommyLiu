@@ -3,7 +3,7 @@
         <v-list-item two-line>
             <v-list-item-content>
                 <v-list-item-title class="text-h5 mb-1"> 劉冠呈 Tommy</v-list-item-title>
-                <v-list-item-subtitle>Back end Developer | Android Developer</v-list-item-subtitle>
+                <v-list-item-subtitle>Back end Developer | Android Developer | Program Designer</v-list-item-subtitle>
                 <div class="pt-5">
                     <v-row>
                         <v-col class="fill-width" justify="space-around">
@@ -46,15 +46,13 @@
 </template>
 <script>
 export default {
-  data: () => {
-    return {
-      slideImage: [require("@/assets/me.jpg")],
-    };
-  },
+    data: () => {
+        return {
+            slideImage: [require("@/assets/me.jpg")],
+        };
+    },
 };
 </script>
 <style lang="scss" scoped>
-
-
 @import "../assets/scss/main.scss";
 </style>

@@ -33,64 +33,7 @@
       </v-alert>
     </div>
     <div class="pb-10 pt-5 subTitle">
-      SKILLS
-    </div>
-    <div>
-      <v-row class="pl-15 pr-15">
-        <v-col>
-          <div class="skill-title"> Front end</div>
-          <div class="text-center">
-            <v-chip class="ma-2" color="green darken-1">
-              <v-icon left>
-                mdi-vuejs
-              </v-icon>
-              Vue js
-            </v-chip>
-            <v-chip class="ma-2" color="primary">
-              <v-icon left>
-                mdi-vuetify
-              </v-icon>
-              Vuetify
-            </v-chip>
-            <v-chip class="ma-2" color="red">
-              <v-icon left>
-                mdi-angular
-              </v-icon>
-              Angular
-            </v-chip>
-            <v-chip class="ma-2" color="#bf4080">
-              <v-icon left>
-                mdi-sass
-              </v-icon>
-              Sass
-            </v-chip>
-            <v-chip class="ma-2" color="yellow">
-              <v-icon left>
-                mdi-language-javascript
-              </v-icon>
-              Javascript
-            </v-chip>
-          </div>
-        </v-col>
-        <v-col>
-          <div class="skill-title"> Back end</div>
-          <v-chip class="ma-2" color="blue lighten-1">
-            <v-icon left>
-              mdi-language-csharp
-            </v-icon>
-            ASP.NET
-          </v-chip>
-          <v-chip class="ma-2" color="blue lighten-1">
-            <v-icon left src="https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg">
-              https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg
-            </v-icon>
-            RabbitMQ
-          </v-chip>
-        </v-col>
-        <v-col>
-          <div class="skill-title"> Android </div>
-        </v-col>
-      </v-row>
+      <skills />
     </div>
     <div class="pb-10 pt-10 subTitle">
       EXPERIENCE & EDUCATION
@@ -156,14 +99,17 @@
 
 <script>
 import card from "./Card.vue";
-
+import skills from "./Skills.vue"
 import colors from "vuetify/lib/util/colors";
 
 export default {
   components: {
     card,
+    skills
   },
+  
   data() {
+    
     return {
       slideImage: [require("@/assets/bg.jpg")],
       color: {
@@ -204,6 +150,7 @@ export default {
       ],
     };
   },
+  
 };
 </script>
 

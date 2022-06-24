@@ -4,6 +4,7 @@
       <div class="fill-width" align="center">
         <p class="blog-name">Tommy Liu</p>
       </div>
+
       <v-row justify="space-around" class="mr-2">
         <span class="group d-inline-flex pa-2">
           <v-btn icon href="https://twitter.com/liutommy880108">
@@ -20,22 +21,40 @@
           </v-btn>
         </span>
       </v-row>
-      <v-row justify="space-around" class="mr-2">
-        <span class="group d-inline-flex pa-2">
-          <v-btn icon>
-            <p class="blog-appbar-col pa-2">home</p>
-          </v-btn>
-          <v-btn icon>
-            <p class="blog-name pa-2">about</p>
-          </v-btn>
-          <v-btn icon>
-            <p class="blog-name pa-2">tec</p>
-          </v-btn>
-          <v-btn icon>
-            <p class="blog-name pa-2">travel</p>
-          </v-btn>
-        </span>
+      <v-row justify="space-around" class="mt-n3">
+        <template>
+          <v-tabs background-color="grey lighten-4" grow class="d-inline-flex justify-end" tile>
+            <v-tab>
+              <v-badge color="grey lighten-4" dot class="blog-appbar-col">
+                home
+              </v-badge>
+            </v-tab>
+
+            <v-tab>
+              <v-badge color="grey lighten-4" dot class="blog-appbar-col">
+                about
+              </v-badge>
+            </v-tab>
+            <v-tab>
+              <v-badge color="grey lighten-4" dot class="blog-appbar-col">
+                skill
+              </v-badge>
+            </v-tab>
+            <v-tab>
+              <v-badge color="grey lighten-4" dot class="blog-appbar-col">
+                experence
+              </v-badge>
+            </v-tab>
+            <v-tab>
+              <v-badge color="grey lighten-4" dot class="blog-appbar-col">
+                PORTFOLIO
+              </v-badge>
+            </v-tab>
+          </v-tabs>
+        </template>
+
       </v-row>
+
     </v-app-bar>
     <div>
       <v-main>
@@ -47,12 +66,7 @@
       <v-footer dark padless>
         <v-card flat tile class="blue-grey lighten-1 white--text text-center">
           <v-card-text>
-            <v-btn
-              v-for="icon in icons"
-              :key="icon"
-              class="mx-4 white--text"
-              icon
-            >
+            <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
               <v-icon size="24px">
                 {{ icon }}
               </v-icon>
@@ -60,14 +74,7 @@
           </v-card-text>
 
           <v-card-text class="white--text pt-0">
-            Phasellus feugiat arcu sapien, et iaculis ipsum elementum sit amet.
-            Mauris cursus commodo interdum. Praesent ut risus eget metus luctus
-            accumsan id ultrices nunc. Sed at orci sed massa consectetur
-            dignissim a sit amet dui. Duis commodo vitae velit et faucibus.
-            Morbi vehicula lacinia malesuada. Nulla placerat augue vel ipsum
-            ultrices, cursus iaculis dui sollicitudin. Vestibulum eu ipsum vel
-            diam elementum tempor vel ut orci. Orci varius natoque penatibus et
-            magnis dis parturient montes, nascetur ridiculus mus.
+
           </v-card-text>
 
           <v-divider></v-divider>
@@ -93,7 +100,13 @@ export default {
 
   data: () => ({
     icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
+    windowwith: window.innerWidth
   }),
+  method: {
+    subt: function () {
+      return window.innerWidth
+    }
+  }
 };
 </script>
 
