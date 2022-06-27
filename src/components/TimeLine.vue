@@ -58,7 +58,8 @@ export default {
                                 sub: [
                                     "工作內容: 70% web 後端服務開發 20% web UI設計 10% 使用者操作說明",
                                     "蝦皮、momo、yahoo等電商平台API串接",
-                                    "以RabbitMQ Message Queue 解決多平台資料非同步串流處理"
+                                    "以RabbitMQ Message Queue 解決多平台資料非同步串流處理",
+                                    "平台 UI 設計"
                                 ]
                             },
                         ]
@@ -91,20 +92,16 @@ export default {
                                 main: "某光學工廠 MES 系統後台(Windows Form)",
                                 sub: [
                                     "工作內容: 80% windows後台開發 20%現場人員訪談及使用教學",
-                                    "MES 報工 APP 設計及開發",
-                                    "取代繁複的紙本作業內容",
-                                    "直接產生工具使用歷程報表",
-                                    "ORACLE ERP及生管資料對接"
+                                    "IIS windows service架設",
+                                    "windows form 後台畫面及功能開發",
                                 ]
                             },
                             {
-                                main: "即時生產報工網頁開發",
+                                main: "MES 即時生產狀態網頁開發",
                                 sub: [
-                                    "減少40%的人工資料處理作業",
-                                    "MES 報工 APP 設計及開發",
-                                    "取代繁複的紙本作業內容",
-                                    "直接產生工具使用歷程報表",
-                                    "ORACLE ERP及生管資料對接"
+                                    "工作內容: 50% web 網頁前端設計 50% stored procedure撰寫",
+                                    "現場工單進行狀況的視覺化設計",
+                                    "介接 Oracle ERP 資料庫",
                                 ]
                             }
                         ]
@@ -122,8 +119,6 @@ export default {
                                     "工作內容: 70% APP 程式開發 30%現場人員訪談、使用環境測試及使用教學",
                                     "MES 報工 APP 設計及開發",
                                     "取代繁複的紙本作業內容",
-                                    "直接產生工具使用歷程報表",
-                                    "ORACLE ERP及生管資料對接"
                                 ]
                             },
                         ]

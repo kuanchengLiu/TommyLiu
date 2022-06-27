@@ -26,11 +26,7 @@
     </div>
 
     <div class="pa-10">
-      <v-alert class="font-italic" border="left" colored-border color="white" elevation="2" style="text-align: center">
-        I'am a Back end Development and I like travel! <br />
-        The origin of this blog is also limited to my desire to test my
-        abilities and record my own life.
-      </v-alert>
+      <about />
     </div>
     <div class="pb-10 pt-5 subTitle">
       <skills />
@@ -84,10 +80,12 @@
 import card from "./Card.vue";
 import skills from "./Skills.vue"
 import timeLine from "./TimeLine.vue"
+import about from "./AboutMe.vue"
 import colors from "vuetify/lib/util/colors";
 
 export default {
   components: {
+    about,
     card,
     skills,
     timeLine

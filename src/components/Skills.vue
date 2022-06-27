@@ -18,21 +18,25 @@
                 </v-col>
                 <v-col>
                     <div class="skill-title"> Back end</div>
-                    <v-chip class="ma-2" color="blue lighten-1">
-                        <v-icon left>
-                            mdi-language-csharp
-                        </v-icon>
-                        ASP.NET
-                    </v-chip>
-                    <v-chip class="ma-2" color="blue lighten-1">
-                        <v-icon left src="https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg">
-                            https://www.vectorlogo.zone/logos/rabbitmq/rabbitmq-icon.svg
-                        </v-icon>
-                        RabbitMQ
-                    </v-chip>
+                    <div class="text-center">
+                        <v-chip class="ma-2" v-for="(item, index) in backEnd" :key="index" :color="item.color">
+                            <v-icon left>
+                                {{ item.icon }}
+                            </v-icon>
+                            {{ item.name }}
+                        </v-chip>
+                    </div>
                 </v-col>
                 <v-col>
                     <div class="skill-title"> Other </div>
+                    <div class="text-center">
+                        <v-chip class="ma-2" v-for="(item, index) in other" :key="index" :color="item.color">
+                            <v-icon left>
+                                {{ item.icon }}
+                            </v-icon>
+                            {{ item.name }}
+                        </v-chip>
+                    </div>
                 </v-col>
             </v-row>
         </div>
@@ -75,6 +79,18 @@ export default {
                     icon: "mdi-language-csharp",
                     color: "blue lighten-1"
                 }
+            ],
+            other: [
+                {
+                    name: "Android",
+                    icon: "mdi-android",
+                    color: "green"
+                },
+                {
+                    name: "Git",
+                    icon: "mdi-git",
+                    color: "orange"
+                },
             ]
         };
     },
