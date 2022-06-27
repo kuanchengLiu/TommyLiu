@@ -35,25 +35,8 @@
     <div class="pb-10 pt-5 subTitle">
       <skills />
     </div>
-    <div class="pb-10 pt-10 subTitle">
-      EXPERIENCE & EDUCATION
-    </div>
-    <div class="px-15">
-      <v-timeline>
-        <v-timeline-item v-for="(year, i) in years" :key="i" :color="year.color" small>
-          <template v-slot:opposite>
-            <span :class="`headline font-weight-bold ${year.color}--text`" v-text="year.year"></span>
-          </template>
-          <v-card class="elevation-2">
-            <v-card-title :class="`headline font-weight-light mb-4 ${year.color}--text`">
-              {{ year.title }}
-            </v-card-title>
-            <v-card-text class="text-h6">
-              {{ year.detail }}
-            </v-card-text>
-          </v-card>
-        </v-timeline-item>
-      </v-timeline>
+    <div class="pb-10 pt-5 subTitle">
+      <timeLine />
     </div>
     <div class="pb-10 pt-10 subTitle">
       PORTFOLIO
@@ -100,57 +83,27 @@
 <script>
 import card from "./Card.vue";
 import skills from "./Skills.vue"
+import timeLine from "./TimeLine.vue"
 import colors from "vuetify/lib/util/colors";
 
 export default {
   components: {
     card,
-    skills
+    skills,
+    timeLine
   },
-  
+
   data() {
-    
+
     return {
       slideImage: [require("@/assets/bg.jpg")],
       color: {
         white: colors.white,
       },
       show: false,
-      years: [
-        {
-          color: 'cyan',
-          year: 'now',
-          title: '析數智匯股份有限公司 (Advant Analytics Tactics)',
-          detail: '- 去考證照及後端工作內容'
-        },
-        {
-          color: 'green',
-          year: '2021-12-01 - 2022-02-18',
-          title: 'Military Service',
-          detail: '完成兵役'
-        },
-        {
-          color: 'pink',
-          year: '2021-06-01 - 2021-11-23',
-          title: '析數智匯股份有限公司 (Advant Analytics Tactics)',
-          detail: 'APP 工作'
-        },
-        {
-          color: 'amber',
-          year: '2018 - 2021',
-          title: 'Providence University',
-          detail: '專案&實習'
-        },
-        {
-          color: 'orange',
-          year: '2016 - 2018',
-          title: 'National Keelung Senior High School',
-          detail: '社會組轉組'
-        },
-      ],
     };
   },
-  
+
 };
 </script>
 
