@@ -17,7 +17,16 @@
                             {{ year.workFor }}
                         </v-card-subtitle>
                         <v-card-text class="text-h6">
-                            {{ year.detail }}
+                            <ol>
+                                <li v-for="(item) in year.detail" :key="item">
+                                    <p class="experence-main">{{ item.main }}</p>
+                                    <ul>
+                                        <li class="experence-sub" v-for="(index) in item.sub" :key="index">
+                                            {{ index }}
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ol>
                         </v-card-text>
                     </v-card>
                 </v-timeline-item>
@@ -39,33 +48,35 @@ export default {
                     detail:
                         [
                             {
-                                main: "證照及後端",
+                                main: "SSCP 資安專業人員認證課程",
                                 sub: [
-                                    "減少40%的人工資料處理作業",
-                                    "MES 報工 APP 設計及開發",
-                                    "取代繁複的紙本作業內容",
-                                    "直接產生工具使用歷程報表",
-                                    "ORACLE ERP及生管資料對接"
+                                    "實作"
                                 ]
                             },
-                        ],
+                            {
+                                main: "某國際零售廠電商串流平台 Web 設計",
+                                sub: [
+                                    "工作內容: 70% web 後端服務開發 20% web UI設計 10% 使用者操作說明",
+                                    "蝦皮、momo、yahoo等電商平台API串接",
+                                    "以RabbitMQ Message Queue 解決多平台資料非同步串流處理"
+                                ]
+                            },
+                        ]
+
                 },
                 {
                     color: 'green',
                     year: '2021.12 - 2022.02',
-                    title: 'Military Service',
-                    workFor: "Army",
+                    title: '陸軍',
+                    workFor: "軍隊",
                     detail:
                         [
                             {
-                                main: "兵役",
+                                main: "義務役",
                                 sub: [
-                                    "減少40%的人工資料處理作業",
-                                    "MES 報工 APP 設計及開發",
-                                    "取代繁複的紙本作業內容",
-                                    "直接產生工具使用歷程報表",
-                                    "ORACLE ERP及生管資料對接"
-                                ]
+                                    "第一階段於斗煥坪服役",
+                                    "第二階段則在成功嶺服役"
+                                ],
                             },
                         ]
                 },
@@ -77,9 +88,9 @@ export default {
                     detail:
                         [
                             {
-                                main: "協助某光學工廠導入 MES 系統(Windows Form)",
+                                main: "某光學工廠 MES 系統後台(Windows Form)",
                                 sub: [
-                                    "減少40%的人工資料處理作業",
+                                    "工作內容: 80% windows後台開發 20%現場人員訪談及使用教學",
                                     "MES 報工 APP 設計及開發",
                                     "取代繁複的紙本作業內容",
                                     "直接產生工具使用歷程報表",
@@ -106,9 +117,9 @@ export default {
                     detail:
                         [
                             {
-                                main: "協助某光學工廠導入 MES 系統(Android App)",
+                                main: "某光學工廠 MES APP 線上開報工專案(Android App)",
                                 sub: [
-                                    "減少40%的人工資料處理作業",
+                                    "工作內容: 70% APP 程式開發 30%現場人員訪談、使用環境測試及使用教學",
                                     "MES 報工 APP 設計及開發",
                                     "取代繁複的紙本作業內容",
                                     "直接產生工具使用歷程報表",
@@ -120,7 +131,7 @@ export default {
                 {
                     color: 'orange',
                     year: '2018.07 - 2021.06',
-                    title: '靜宜大學',
+                    title: '靜宜大學 資訊工程學系',
                     detail:
                         [
                             {
