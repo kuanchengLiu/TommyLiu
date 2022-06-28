@@ -1,49 +1,46 @@
 <template>
     <v-container>
         <div class="pb-10 pt-5 subTitle">
-            SKILLS
+            PORTFOLIO
         </div>
         <div>
-            <v-row class="pl-15 pr-15">
-                <v-col>
-                    <div class="skill-title"> Front end</div>
-                    <div class="text-center">
-                        <v-chip class="ma-2" v-for="(item, index) in frontEnd" :key="index" :color="item.color">
-                            <v-icon left>
-                                {{ item.icon }}
-                            </v-icon>
-                            {{ item.name }}
-                        </v-chip>
-                    </div>
-                </v-col>
-                <v-col>
-                    <div class="skill-title"> Back end</div>
-                    <div class="text-center">
-                        <v-chip class="ma-2" v-for="(item, index) in backEnd" :key="index" :color="item.color">
-                            <v-icon left v-if="item.ispng != true">
-                                {{ item.icon }}
-                            </v-icon>
-                            <v-icon left v-if="item.ispng == true">
-                                xd
-                            </v-icon>
+            <v-card class="mx-auto" max-width="344">
+                <v-img src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg" height="200px"></v-img>
+                <v-card-title>
+                    Top western road trips
+                </v-card-title>
+                <v-card-subtitle>
+                    1,000 miles of wonder
+                </v-card-subtitle>
 
-                            {{ item.name }}
-                        </v-chip>
-                    </div>
-                </v-col>
-                <v-col>
-                    <div class="skill-title"> Other </div>
-                    <div class="text-center">
-                        <v-chip class="ma-2" v-for="(item, index) in other" :key="index" :color="item.color">
-                            <v-icon left>
-                                {{ item.icon }}
-                            </v-icon>
-                            {{ item.name }}
-                        </v-chip>
+                <v-card-actions>
+                    <v-btn color="orange lighten-2" text>
+                        Explore
+                    </v-btn>
 
+                    <v-spacer></v-spacer>
+
+                    <v-btn icon @click="show = !show">
+                        <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+                    </v-btn>
+                </v-card-actions>
+
+                <v-expand-transition>
+                    <div v-show="show">
+                        <v-divider></v-divider>
+
+                        <v-card-text>
+                            I'm a thing. But, like most politicians, he promised more than he could deliver. You won't
+                            have time for
+                            sleeping, soldier, not with all the bed making you'll be doing. Then we'll go with that data
+                            file! Hey,
+                            you add a one and two zeros to that or we walk! You're going to do his laundry? I've got to
+                            find a way to
+                            escape.
+                        </v-card-text>
                     </div>
-                </v-col>
-            </v-row>
+                </v-expand-transition>
+            </v-card>
         </div>
     </v-container>
 </template>

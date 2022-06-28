@@ -21,7 +21,7 @@
           </v-btn>
         </span>
       </v-row>
-      <v-row justify="space-around" class="mt-n3">
+      <v-row justify="space-around" class="mt-n3" v-if="windowWidth > 850">
         <template>
           <v-tabs background-color="grey lighten-4" grow class="d-inline-flex justify-end" tile>
             <v-tab>
@@ -52,9 +52,26 @@
             </v-tab>
           </v-tabs>
         </template>
-
       </v-row>
+      <v-row justify="space-around" class="mt-n3" v-else>
+        <template>
+          <div class="text-center" justify="space-end">
+            <v-menu open-on-hover bottom offset-y>
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn outlined color="grey darken-1" v-bind="attrs" v-on="on">
+                  <v-icon color="grey darken-1" class="pa-2">mdi-menu</v-icon>
+                </v-btn>
+              </template>
 
+              <v-list>
+                <v-list-item v-for="(index) in menuItem" :key="index">
+                  <v-list-item-title>{{ index }}</v-list-item-title>
+                </v-list-item>
+              </v-list>
+            </v-menu>
+          </div>
+        </template>
+      </v-row>
     </v-app-bar>
     <div>
       <v-main>
@@ -100,11 +117,28 @@ export default {
 
   data: () => ({
     icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
-    windowwith: window.innerWidth
+    windowWidth: '',
+    menuItem: ["HOME", "ABOUT", "SKILL", "EXPERENCE", "PORTFOLIO"]
   }),
-  method: {
-    subt: function () {
-      return window.innerWidth
+  watch: {
+    windowHeight(newHeight, oldHeight) {
+      this.windowWidth = `it changed to ${newHeight} from ${oldHeight}`;
+    }
+  },
+
+  mounted() {
+    this.$nextTick(() => {
+      window.addEventListener('resize', this.onResize);
+    })
+  },
+
+  beforeDestroy() {
+    window.removeEventListener('resize', this.onResize);
+  },
+
+  methods: {
+    onResize() {
+      this.windowWidth = window.innerWidth
     }
   }
 };
