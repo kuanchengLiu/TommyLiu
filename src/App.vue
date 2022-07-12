@@ -81,7 +81,7 @@
 
     <div class="pt-1">
       <v-footer dark padless>
-        <v-card flat tile class="blue-grey lighten-1 white--text text-center">
+        <v-card flat tile class="blue-grey lighten-1 white--text text-center " style="width: 100%;">
           <v-card-text>
             <v-btn v-for="icon in icons" :key="icon" class="mx-4 white--text" icon>
               <v-icon size="24px">
@@ -97,7 +97,7 @@
           <v-divider></v-divider>
 
           <v-card-text class="white--text">
-            {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+            {{ new Date().getFullYear() }} — <strong>Tommy</strong>
           </v-card-text>
         </v-card>
       </v-footer>
@@ -117,7 +117,7 @@ export default {
 
   data: () => ({
     icons: ["mdi-facebook", "mdi-twitter", "mdi-linkedin", "mdi-instagram"],
-    windowWidth: '',
+    windowWidth: window.innerWidth,
     menuItem: ["HOME", "ABOUT", "SKILL", "EXPERENCE", "PORTFOLIO"]
   }),
   watch: {

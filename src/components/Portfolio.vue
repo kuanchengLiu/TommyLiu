@@ -27,7 +27,7 @@
                     </v-card-actions>
 
                     <v-expand-transition>
-                        <div v-show="show">
+                        <div v-show="item.show">
                             <v-divider></v-divider>
 
                             <v-card-text>
@@ -50,7 +50,7 @@ export default {
             cardItems: [
                 {
                     image: require("@/assets/SSCP.png"),
-                    title: 'SSCP 專業自安人員訓練課程',
+                    title: 'SSCP 專業資安人員訓練課程',
                     subTitle: '在上班之餘增進自己的能力....',
                     details: 'test',
                     show: false,
@@ -63,7 +63,7 @@ export default {
                     show: false,
                 },
                 {
-                    image: require("@/assets/SSCP.png"),
+                    image: require("@/assets/dashboard.png"),
                     title: 'SSCP 專業自安人員訓練課程',
                     subTitle: '在上班之餘增進自己的能力....',
                     details: 'test',
